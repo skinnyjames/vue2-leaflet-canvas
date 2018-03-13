@@ -12,10 +12,13 @@
     mounted() {
       this.mapObject = this.drawObject()
        
+      console.log(this.$parent);
+      debugger
       if (this.$parent._isMounted) {
         this.deferredMountedTo(this.$parent.mapObject)
       }else{
         console.log('FLASE')
+        debugger
       }
     },
     beforeDestroy() {
@@ -25,6 +28,8 @@
       deferredMountedTo(parent) {
         let vm = this  
         
+        console.log('parent', parent)
+        debugger
         vm.parent = parent
         vm.mapObject.addTo(parent)
 
