@@ -2,22 +2,23 @@
   "name": "vue2-leaflet-canvas",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/vue2leaflet-canvas.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "demo": "poi examples/app.js"
+    "demo": "poi examples/app.js",
+    "build": "poi build src/index.vue"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babel-runtime": "6.26.0",
+    "@skinnyjames/leaflet-canvas": "1.0.2",
     "leaflet": "1.3.1",
-    "leaflet-canvas-layer": "github:skinnyjames/gLayers.Leaflet",
     "vue2-leaflet": "0.0.58"
   },
   "devDependencies": {
     "babel-plugin-transform-runtime": "6.23.0",
     "babel-preset-es2015": "6.24.1",
+    "babel-runtime": "6.26.0",
     "poi": "9.6.13",
     "random-coordinates": "1.0.1",
     "vue": "2.5.15",
