@@ -1,6 +1,6 @@
 {
-  "name": "vue2-leaflet-canvas",
-  "version": "1.0.0",
+  "name": "vue2leaflet-canvas",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/vue2leaflet-canvas.js",
   "scripts": {
