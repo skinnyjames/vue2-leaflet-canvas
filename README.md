@@ -94,3 +94,13 @@ methods: {
 }
 
 ```
+
+## develop
+
+```
+git clone git@github.com:skinnyjames/vue2leaflet-canvas.git && cd vue2leaflet-canvas
+npm install
+npm run build
+npm run demo
+```
+
