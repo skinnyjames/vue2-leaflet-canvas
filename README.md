@@ -16,6 +16,7 @@ in your app
 <v-map ref="map" :zoom="10">
   <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
   <v-canvas-layer
+    :locations="locations"
     @l-drawing="drawing"
     @l-mousemove="hover"
     @l-click="click">
@@ -34,6 +35,13 @@ Vue.component('v-tilelayer', Vue2Leaflet.TileLayer)
 Vue.component('v-canvas-layer': Vue2LeafletCanvas)
 
 methods: {
+  data() {
+    // generate an array of locations that have a L.latLng property named "latlng"
+    ...
+    return {
+      locations: locations,
+    }
+  },
   // use the drawing event to get access to the canvas element
   drawing(info) {
     let canvas = info.canvas
@@ -58,42 +66,30 @@ methods: {
   hover(info) {
     let vm = this
     let container = document.getElementsByClassName('leaflet-container')[0]
-    if (isMoused()) {
+    // isMoused has a boolean describing if a location is hovered over
+    if (info.isMoused) {
       container.style.cursor = 'crosshair'
     } else {
       container.style.cursor = ''
-    }
-    function isMoused() {
-      let bounds = info.getBufferedBounds(6)
-      for (let i=0;i<vm.locations.length;i++) {
-        if (bounds.contains(vm.locations[i].latlng)) {
-          return true
-        }
-      }
-      return false
     }
   },
   // logic for clicks
   click(info) {
     let vm = this
-    let point = isClicked()
-    if (point) {
-      alert(point.message)
-    }
-    
-    function isClicked() {
-      let bounds = info.getBufferedBounds(6)
-      for (let i=0;i<vm.locations.length;i++) {
-        if (bounds.contains(vm.locations[i].latlng)) {
-          return vm.locations[i]
-        }
-      }
-      return false
+    // clickedLocations will have any clicked location objects
+    let points = info.clickedLocations
+    if (points[0]) {
+      alert(points[0].message)
     }
   },
 }
 
 ```
+
+## notes
+
+You don't need to pass an array to the locations property, as you'll be drawing on the canvas yourself.
+However, the isMoused and clickedLocations properties only work when there are locations with valid latlngs
 
 ## develop
 

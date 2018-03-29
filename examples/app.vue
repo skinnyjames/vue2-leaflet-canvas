@@ -4,6 +4,7 @@
     <v-map ref="map" :zoom=10 :center="initialLocation">
       <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
       <v-canvas-layer
+        :locations="locations"
         @l-drawing="drawing"
         @l-mousemove="hover"
         @l-click="click"
@@ -49,36 +50,17 @@
       hover(info) {
         let vm = this
         let container = document.getElementsByClassName('leaflet-container')[0]
-        if (isMoused()) {
+        if (info.isMoused) {
           container.style.cursor = 'crosshair'
         } else {
           container.style.cursor = ''
         }
-        function isMoused() {
-          let bounds = info.getBufferedBounds(6)
-          for (let i=0;i<vm.locations.length;i++) {
-            if (bounds.contains(vm.locations[i].latlng)) {
-              return true
-            }
-          }
-          return false
-        }
       },
       click(info) {
         let vm = this
-        let point = isClicked()
-        if (point) {
-          alert(point.message)
-        }
-        
-        function isClicked() {
-          let bounds = info.getBufferedBounds(6)
-          for (let i=0;i<vm.locations.length;i++) {
-            if (bounds.contains(vm.locations[i].latlng)) {
-              return vm.locations[i]
-            }
-          }
-          return false
+        let points = info.clickedLocations
+        if (points[0]) {
+          alert(points[0].message)
         }
       },
       changeNumber() {
