@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@skinnyjames/leaflet-canvas": "1.0.2",
+    "@skinnyjames/leaflet-canvas": "1.0.3",
     "leaflet": "1.3.1",
     "vue2-leaflet": "0.0.58"
   },
