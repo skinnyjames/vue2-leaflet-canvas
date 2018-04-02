@@ -5,7 +5,7 @@ A Vue2Leaflet wrapper for @skinnyjames/leaflet-canvas
 ## usage
 
 ```
-npm install vue2-leaflet-canvas
+npm install @skinnyjames/vue2-leaflet-canvas
 
 ```
 
@@ -28,7 +28,7 @@ in your app
 ```javascript
 
 import Vue2Leaflet from 'vue2-leaflet'
-import Vue2LeafletCanvas from 'vue2leaflet-canvas'
+import Vue2LeafletCanvas from '@skinnyjames/vue2-leaflet-canvas'
 
 Vue.component('v-map', Vue2Leaflet.Map)
 Vue.component('v-tilelayer', Vue2Leaflet.TileLayer)
