@@ -4,8 +4,8 @@ var nodeExternals = require('webpack-node-externals');
 module.exports = {
   vendor: false,
   filename: {
-   js: 'vue2leaflet-canvas.js',
-   css: 'vue2leaflet-canvas.css',
+   js: 'vue2-leaflet-canvas.js',
+   css: 'vue2-leaflet-canvas.css',
    images: 'assets/images/[name].ext',
    fonts: 'assets/fonts/[name].ext',
    chunk: '[id].chunk.js'

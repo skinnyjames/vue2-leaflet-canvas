@@ -1,4 +1,4 @@
-## vue2leaflet-canvas
+## vue2-leaflet-canvas
 
 A Vue2Leaflet wrapper for @skinnyjames/leaflet-canvas
 
@@ -94,7 +94,7 @@ However, the isMoused and clickedLocations properties only work when there are l
 ## develop
 
 ```
-git clone git@github.com:skinnyjames/vue2leaflet-canvas.git && cd vue2leaflet-canvas
+git clone git@github.com:skinnyjames/vue2-leaflet-canvas.git && cd vue2-leaflet-canvas
 npm install
 npm run build
 npm run demo
