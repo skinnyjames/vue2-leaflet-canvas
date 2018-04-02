@@ -5,7 +5,7 @@ A Vue2Leaflet wrapper for @skinnyjames/leaflet-canvas
 ## usage
 
 ```
-npm install vue2leaflet-canvas
+npm install vue2-leaflet-canvas
 
 ```
 
