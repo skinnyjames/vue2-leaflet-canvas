@@ -1,1 +1,1 @@
-module.exports = require('./index').default
+exports.CanvasLayer = require('./index').default
