@@ -32,7 +32,7 @@ import Vue2LeafletCanvas from '@skinnyjames/vue2-leaflet-canvas'
 
 Vue.component('v-map', Vue2Leaflet.Map)
 Vue.component('v-tilelayer', Vue2Leaflet.TileLayer)
-Vue.component('v-canvas-layer': Vue2LeafletCanvas.CanvasLayer)
+Vue.component('v-canvas-layer': Vue2LeafletCanvas)
 
 methods: {
   data() {

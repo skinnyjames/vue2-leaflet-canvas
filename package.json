@@ -1,12 +1,12 @@
 {
   "name": "@skinnyjames/vue2-leaflet-canvas",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "dist/vue2-leaflet-canvas.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "demo": "poi examples/app.js",
-    "build": "poi build src/canvas.js"
+    "build": "poi build src/index.vue --format cjs"
   },
   "repository": {
     "type": "git",
