@@ -49,7 +49,6 @@ methods: {
     let mapa = this.$refs.map.mapObject
     let bounds = mapa.getBounds()
 
-    ctx.clearRect(0,0, canvas.width, canvas.height)
     ctx.fillStyle = "rgb(106, 158, 242)"
 
     for (let i=0;i<this.locations.length;i++) {
