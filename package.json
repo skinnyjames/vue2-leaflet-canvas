@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "demo": "poi examples/app.js",
-    "build": "poi build src/index.vue --format cjs"
+    "build": "poi build src/index.vue --format cjs --config config/poi.config.js"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@skinnyjames/leaflet-canvas": "1.0.5",
+    "@skinnyjames/leaflet-canvas": "1.0.6",
     "leaflet": "1.3.1",
     "vue2-leaflet": "0.0.58"
   },

@@ -4,6 +4,7 @@
     <v-map ref="map" :zoom=10 :center="initialLocation">
       <v-tilelayer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></v-tilelayer>
       <v-canvas-layer
+        ref="canvas"
         :locations="locations"
         @l-drawing="drawing"
         @l-mousemove="hover"
@@ -46,6 +47,7 @@
             ctx.closePath()
           }  
         }
+        info.layer.fire('zoom')
       },
       hover(info) {
         let vm = this

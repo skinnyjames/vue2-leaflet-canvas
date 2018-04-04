@@ -12,7 +12,8 @@ module.exports = {
   },
   webpack: {
     resolve: {
-      alias: {vue: 'vue/dist/vue.js'}
+      alias: {vue: 'vue/dist/vue.js'},
+      extensions: ['*', '.js', '.vue']
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
