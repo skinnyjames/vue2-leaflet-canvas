@@ -33,6 +33,8 @@
         , 'viewreset'
         , 'move'
         , 'moveend'
+        , 'mounted'
+        , 'unmounted'
         ]
 
         for (let i=0;i<events.length;i++) {
